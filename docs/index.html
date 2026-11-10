@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hallpost: buy-once email newsletter app for churches, clubs and PTAs</title>
+<meta name="description" content="About Hallpost, the Windows and Android app that sends a group's newsletter from its own Gmail or Zoho, paced under the daily limit. Free for 100 contacts, Pro $39 once.">
+<meta property="og:title" content="Hallpost: Email Newsletter">
+<meta property="og:description" content="Send your church, club or PTA newsletter from your own email account. Pay once.">
+<meta property="og:image" content="https://nookeshkarri7.github.io/hallpost-email-newsletter/assets/feature-graphic.png">
+<link rel="icon" href="assets/icon.png" type="image/png">
+<style>
+  :root { --bg:#F6F2EA; --surface:#FFFDF8; --line:#E2DCCF; --ink:#1F2A27; --muted:#5E6B66; --green:#1F4D3F; --red:#B8432F; color-scheme: light dark; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#151A18; --surface:#1D2421; --line:#2E3733; --ink:#ECE7DB; --muted:#A3ADA8; --green:#7FBFA6; --red:#E58A72; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1, h2 { font-family: Georgia, serif; line-height: 1.15; }
+  h1 { font-size: clamp(32px, 5vw, 46px); margin: 12px 0; }
+  a { color: var(--green); }
+  img { max-width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid var(--line); }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+  .btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 12px; font-weight: 700; text-decoration: none; background: var(--ink); color: var(--bg); }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+  .grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 16px; margin: 24px 0; }
+  .video { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: var(--green); }
+  .video button { all: unset; cursor: pointer; position: absolute; inset: 0; display: grid; place-items: center; }
+  .video img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; border-radius: 0; }
+  .video span { position: relative; width: 70px; height: 70px; border-radius: 50%; background: var(--red); }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  footer { color: var(--muted); font-size: 14px; margin-top: 40px; }
+  @media (max-width: 640px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<main>
+  <img src="assets/icon.png" alt="" width="72" height="72" style="border:0">
+  <h1>Hallpost: Email Newsletter</h1>
+  <p>Hallpost is a small app for the volunteers who send a church, school, club or charity newsletter. It sends from the group's own Gmail, Zoho, Yahoo or iCloud address, one email at a time, under the mailbox's daily limit, and keeps the member list on your own computer or phone.</p>
+  <div class="ctas">
+    <a class="btn" href="https://apps.microsoft.com/detail/9P26MH76WMBZ">Get it from Microsoft</a>
+    <a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.hallpostapp.hallpost">Get it on Google Play</a>
+  </div>
+  <div class="video" data-yt="0GxnR_9ktpU">
+    <img src="assets/windows.webp" alt="" width="1440" height="810">
+    <button type="button" aria-label="Play the Hallpost for Windows demo"><span></span></button>
+  </div>
+  <h2>Why it exists</h2>
+  <p>Mailchimp's free plan now covers 250 contacts and 500 emails a month, so a parish or PTA with a few hundred families has to pay every month. Hallpost is $39 once on Windows (free for up to 100 contacts) and free with ads on Android.</p>
+  <h2>Features</h2>
+  <ul>
+    <li>Member import from CSV (Google Contacts, Excel, Outlook), with a reason for every skipped row</li>
+    <li>Four templates with a live preview, {first_name} personalisation and a test send</li>
+    <li>Paced sending under your daily limit, resuming tomorrow from the same member</li>
+    <li>Reply-STOP unsubscribe list honoured on every list</li>
+    <li>SPF and DMARC check for your own domain</li>
+    <li>No tracking pixels, no analytics, no account</li>
+  </ul>
+  <div class="grid">
+    <img src="assets/feature-graphic.png" alt="Hallpost: the email newsletter for your church, club or PTA" width="1024" height="500" loading="lazy">
+    <img src="assets/phone-sending.webp" alt="Hallpost on Android while sending, with the postmark progress ring" width="540" height="960" loading="lazy">
+  </div>
+  <p><a href="https://hallpost.pages.dev/">Website</a> · <a href="https://hallpost.pages.dev/privacy/">Privacy policy</a> · <a href="https://youtube.com/shorts/HDfYshY6d58">Android teaser</a> · <a href="https://github.com/nookeshkarri7/hallpost-email-newsletter">Repository</a></p>
+  <footer>Support: <a href="mailto:anithabheesetty@gmail.com">anithabheesetty@gmail.com</a> · © 2026 Nookesh Karri</footer>
+</main>
+<script>
+  document.querySelectorAll(".video[data-yt]").forEach(function (v) {
+    v.querySelector("button").addEventListener("click", function () {
+      var f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + v.dataset.yt + "?autoplay=1&rel=0";
+      f.title = "Hallpost video";
+      f.allow = "autoplay; encrypted-media; picture-in-picture";
+      f.allowFullscreen = true;
+      v.replaceChildren(f);
+    });
+  });
+</script>
+</body>
+</html>
